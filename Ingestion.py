@@ -23,11 +23,6 @@ from sentence_transformers import SentenceTransformer
 from config import settings, UPLOAD_DIR
 
 logger = logging.getLogger(__name__)
-
-# ---------------------------------------------------------------------------
-# Singletons (loaded once at startup)
-# ---------------------------------------------------------------------------
-
 _embedder: Optional[SentenceTransformer] = None
 _chroma_client: Optional[chromadb.PersistentClient] = None
 _collection = None
