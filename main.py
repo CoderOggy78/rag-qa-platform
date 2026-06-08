@@ -131,11 +131,6 @@ async def ingest_url(body: URLIngestRequest):
         message=f"Successfully indexed {meta['num_chunks']} chunks from URL.",
     )
 
-
-# ---------------------------------------------------------------------------
-# Query endpoints
-# ---------------------------------------------------------------------------
-
 @app.post("/query", response_model=QueryResponse, tags=["Query"])
 async def query(body: QueryRequest):
     """Ask a question. Returns answer + cited sources."""
